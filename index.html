@@ -5,6 +5,23 @@
     <title>Reack's blog</title>
 </head>
 <body>
-    <h1>Hey! Welcome to the Reack blog where I will record some development logs.</h1>
+    <h1 id="hi">Hey! Welcome to the Reack blog where I will record some development logs.</h1>
+    <script>
+        var request = new XMLHttpRequest()
+        request.open('GET', 'https://api.github.com/gists/7330eba7879d2a2289f854eb2394ee95')
+        request.onload = function() {
+            var data =JSON.parse(this.response)
+            data.forEach(element => {
+                if( element === "files") {
+                    element.forEach(item => {
+                    if (item === "raw_url") {
+                        document.getElementById("hi").innerHTML =  itme
+                    }
+                    })
+                }
+            })
+        }
+        request.send
+    </script>
 </body>
 </html>
