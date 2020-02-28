@@ -11,8 +11,9 @@
         request.open('GET', 'https://api.github.com/gists/7330eba7879d2a2289f854eb2394ee95')
         request.onload = function() {
             var data = JSON.parse(this.response)
-            console.log(data)
-            // data.forEach(element => {
+            console.log(data.files)
+            // if(data.files == )
+            // data.file.forEach(element => {
             //     if( element === "files") {
             //         element.forEach(item => {
             //         if (item === "raw_url") {
