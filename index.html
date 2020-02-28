@@ -10,16 +10,17 @@
         var request = new XMLHttpRequest()
         request.open('GET', 'https://api.github.com/gists/7330eba7879d2a2289f854eb2394ee95')
         request.onload = function() {
-            var data =JSON.parse(this.response)
-            data.forEach(element => {
-                if( element === "files") {
-                    element.forEach(item => {
-                    if (item === "raw_url") {
-                        document.getElementById("hi").innerHTML =  itme
-                    }
-                    })
-                }
-            })
+            var data = JSON.parse(this.response)
+            console.log(data)
+            // data.forEach(element => {
+            //     if( element === "files") {
+            //         element.forEach(item => {
+            //         if (item === "raw_url") {
+            //             document.getElementById("hi").innerHTML =  itme
+            //         }
+            //         })
+            //     }
+            // })
         }
         request.send()
     </script>
