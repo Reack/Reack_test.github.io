@@ -13,8 +13,8 @@
             var data = JSON.parse(this.response)
             console.log(data.files)
             var key = Object.keys(data.files)[0];
-            var data2 = JSON.parse(this.response[files][key]);
             console.log(Object.keys(data.files));
+            var data2 = JSON.parse(this.response['files'][key]);
             console.log(data2);
             // if(data.files == )
             // data.file.forEach(element => {
